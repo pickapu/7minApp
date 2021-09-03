@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Finsh"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/actionBarfinsh"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:titleTextColor="@color/black"
+        android:theme="@style/ToolbarTheme" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="End"
+        android:textColor="@color/colorAccent"
+        android:textSize="35sp"
+        android:layout_marginVertical="10dp"
+        />
+    <LinearLayout
+        android:layout_width="@dimen/start_button_size"
+        android:layout_height="@dimen/start_button_size"
+        android:layout_marginTop="@dimen/start_button_margin_top"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/riple_background"
+        android:layout_marginBottom="5dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_done"
+            tools:ignore="ImageContrastCheck" />
+    </LinearLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Congratulations!"
+    android:layout_gravity="center"
+    android:textSize="20sp"
+    android:layout_marginVertical="5dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have completed the Workout!"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="5dp"
+        />
+
+    <Button
+        android:id="@+id/finshBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        android:background="@color/colorAccent"
+        android:paddingHorizontal="10dp"
+        android:text="FINSIH"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
