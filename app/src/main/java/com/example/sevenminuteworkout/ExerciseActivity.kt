@@ -1,5 +1,6 @@
 package com.example.sevenminuteworkout
 
+import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -12,11 +13,13 @@ import android.widget.CursorAdapter
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sevenminuteworkout.databinding.ActivityExerciseBinding
+import com.example.sevenminuteworkout.databinding.BackCustomDialogBoxBinding
 import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 
 class ExerciseActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
+    private lateinit var dialogBinding:BackCustomDialogBoxBinding
     private lateinit var binding:ActivityExerciseBinding
     private var resTimer:CountDownTimer?=null
     private var resProgress=0
@@ -27,6 +30,7 @@ private var exerciseAdapter:ExerciseStatusAdapter?=null
     private var exerciseTimer:CountDownTimer?=null
     private var exerciseProgress=0
     private var mediaPlayer:MediaPlayer?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityExerciseBinding.inflate(layoutInflater)
@@ -37,7 +41,7 @@ private var exerciseAdapter:ExerciseStatusAdapter?=null
             actionBar.setDisplayHomeAsUpEnabled(true)
         }
         binding.actionBar.setNavigationOnClickListener {
-            onBackPressed()
+            customDialogForBackButton()
         }
         tts= TextToSpeech(this,this)
         exerciseList=Constant.defaultExerciseList()
@@ -167,5 +171,19 @@ private fun speakOut(text:String?){
 
 
 
+    }
+    private fun customDialogForBackButton () {
+        dialogBinding = BackCustomDialogBoxBinding.inflate(layoutInflater)
+        val customDialog = Dialog(this)
+        customDialog.setContentView(dialogBinding.root)
+        dialogBinding.yesBtn.setOnClickListener {
+            finish()
+            customDialog.dismiss()
+
+        }
+        dialogBinding.noBtn.setOnClickListener {
+            customDialog.dismiss()
+        }
+        customDialog.show()
     }
 }
