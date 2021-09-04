@@ -26,6 +26,8 @@
             android:id="@+id/tilMetricUnitWeight"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
+            app:boxStrokeColor="@color/black"
+            android:textColorHint="@color/black"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -34,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:hint="WEIGHT (in kg)"
                 android:inputType="numberDecimal"
-                android:textColorHint="@color/black"
+
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,15 +44,17 @@
             android:id="@+id/tilMetricUnitHeight"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
+            app:boxStrokeColor="@color/black"
             android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etMetricUnitHeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="HEIGHT (in cm)"
-                android:textColorHint="@color/black"
+
                 android:inputType="numberDecimal"
                 android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="YOUR BMI"
+
                 android:textAllCaps="true"
                 android:visibility="invisible"
                 android:textSize="16sp" />

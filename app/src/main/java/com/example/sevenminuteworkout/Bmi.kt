@@ -49,25 +49,25 @@ class Bmi : AppCompatActivity() {
         val bmiLabel: String
         val bmiDescription: String
 
-        if (java.lang.Float.compare(bmi, 15f) <= 0) {
+        if (bmi.compareTo(15f) <= 0) {
             bmiLabel = "Very severely underweight"
             bmiDescription = "Oops! You really need to take care of your better! Eat more!"
-        } else if (java.lang.Float.compare(bmi, 15f) > 0 && java.lang.Float.compare(bmi,16f) <= 0) {
+        } else if (bmi.compareTo(15f) > 0 && bmi.compareTo(16f) <= 0) {
             bmiLabel = "Severely underweight"
             bmiDescription = "Oops! You really need to take care of your better! Eat more!"
-        } else if (java.lang.Float.compare(bmi, 16f) > 0 && java.lang.Float.compare(bmi, 18.5f)<= 0) {
+        } else if (bmi.compareTo(16f) > 0 && bmi.compareTo(18.5f) <= 0) {
             bmiLabel = "Underweight"
             bmiDescription = "Oops! You really need to take care of your better! Eat more!"
-        } else if (java.lang.Float.compare(bmi, 18.5f) > 0 && java.lang.Float.compare(bmi, 25f) <= 0) {
+        } else if (bmi.compareTo(18.5f) > 0 && bmi.compareTo(25f) <= 0) {
             bmiLabel = "Normal"
             bmiDescription = "Congratulations! You are in a good shape!"
-        } else if (java.lang.Float.compare(bmi, 25f) > 0 && java.lang.Float.compare(bmi, 30f) <= 0) {
+        } else if (bmi.compareTo(25f) > 0 && bmi.compareTo(30f) <= 0) {
             bmiLabel = "Overweight"
             bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
-        } else if (java.lang.Float.compare(bmi, 30f) > 0 && java.lang.Float.compare(bmi, 35f) <= 0) {
+        } else if (bmi.compareTo(30f) > 0 && bmi.compareTo(35f) <= 0) {
             bmiLabel = "Obese Class | (Moderately obese)"
             bmiDescription = "Oops! You really need to take care of your yourself! Workout maybe!"
-        } else if (java.lang.Float.compare(bmi, 35f) > 0 && java.lang.Float.compare(bmi, 40f) <= 0) {
+        } else if (bmi.compareTo(35f) > 0 && bmi.compareTo(40f) <= 0) {
             bmiLabel = "Obese Class || (Severely obese)"
             bmiDescription = "OMG! You are in a very dangerous condition! Act now!"
         } else {
