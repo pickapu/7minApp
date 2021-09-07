@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SevenMinuteWorkout">
         <activity
-            android:name=".Bmi"
+            android:name=".History"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialComponents.NoActionBar"/>
+        <activity
+            android:name=".Bmi"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
         <activity
             android:name=".Finsh"
             android:exported="true"
